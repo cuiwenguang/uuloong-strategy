@@ -1,0 +1,10 @@
+{
+  "generator-flask-api": {
+    "appName": "app",
+    "database": "none",
+    "databaseMapper": "none",
+    "versioningScheme": "minor",
+    "currentVersion": "v1.0",
+    "urlPrefix": "/api"
+  }
+}
