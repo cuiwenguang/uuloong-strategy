@@ -34,9 +34,11 @@ class StrategySchema(ModelSchema):
         for campaign in campaigns:
             campaigns_dict[str(campaign.id)] = campaign
 
-        for compaign in all_campaigns:
-            campaign_id = compaign.get("campaign_id")
-            compaign["campaign"] = campaigns_dict[campaign_id].enum
+        for campaign in all_campaigns:
+            campaign_id = campaign.get("campaign_id")
+
+            campaign_object = campaigns_dict.get(campaign_id)
+            campaign["campaign"] = campaign_object.enum if campaign_object is not None else None
 
         return data
 
