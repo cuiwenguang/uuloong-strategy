@@ -1,7 +1,7 @@
 from flask import Flask
 
 from config import config
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 
 
 def create_app(config_name):

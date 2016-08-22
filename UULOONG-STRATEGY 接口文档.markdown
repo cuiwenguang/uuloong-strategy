@@ -46,7 +46,7 @@ Key | 类型 | 描述
 ---|---|---
 name | string | 广告商自定义名称，即对于本广告条目自定义的名词，可以为任何值
 supplier |string| 广告商名词，如 "Admob"
-access_info |string| 本广告商基础的访问信息，API key 或账号密码等（可不填）
+access_info |object| 本广告商基础的访问信息，API key 或账号密码等（可不填）
 enum |string| enum 是用于和客户端之间沟通的字符串，如 “kCampaignChartBoost” 本字段一旦确定不再改变
 
 #### Event
@@ -110,8 +110,8 @@ Strategy Endpoint 是对于游戏中广告策略的具体描述：
 Key | 类型 | 描述
 ---|---|---
 game_id | string | Game 对象的 ID，策略是基于 Game 之上的
-country | string| 事件名词
-device_model | string | 设备类型
+country | string| 策略所对应的国家，需要使用标准国家编号 (ISO 3166-1)
+device_model | string | 设备类型，只能填写 iOS 和 Android
 banner_campaign | List(Advertise) | Banner 类型
 interstitial_campaign | List(Advertise) | Interstitial 类型
 video_campaign | List(Advertise) | Video 类型
@@ -510,3 +510,41 @@ X-BYGame-Application-Token: xxxxxxxxxxxx
 		}
 	}]
 }
+
+### 序列数据接口
+
+#### 创建序列数据
+
+
+#### 手机端获取策略
+`GET /api/v1.0/strategy
+
+手机端需要发送 "X-BYGame-Application-Token" 作为 header， 需要注意的是，"X-BYGame-Application-Token" 的值是由 Game resources 创建时生成的
+
+```http
+GET /api/v1.0/series_data HTTP/1.1
+Content-Type: application/json
+X-BYGame-Application-Token: xxxxxxxxxxxx
+
+[{
+	"timestamp": "datetime", // 事件创建时间
+	"type": "data_type_ads_stats", // 数列数据类型
+	"value": {
+		"campaign": "string", // 广告商 enum
+		"campaign_type": "string", // 广告类型
+		
+		"if_displayed": bool, // 广告是否播放成功
+		"if_clicked": bool, // 广告的否被点击
+		"video_duration": float, // 广告播放时长
+		"if_download": bool // 广告内容是否被下载
+	}
+}]
+```
+
+返回数据：
+
+```json
+{
+	"success": true,
+}
+```
