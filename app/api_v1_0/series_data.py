@@ -18,7 +18,6 @@ def get_series_data(id):
     pass
 '''
 
-
 @api.route('/series_data', methods=['POST'])
 def create_series_data():
     try:
