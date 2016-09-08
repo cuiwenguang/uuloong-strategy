@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # This file strategy.py is created by lincan for Project uuloong-strategy
 # on a date of 8/15/16 - 10:56 AM
 
@@ -17,15 +18,23 @@ def random_string_generator(size=6, chars=string.ascii_uppercase + string.digits
 
 
 class Game(Document):
-    name = StringField()
-    ios_access_key = StringField()
-    android_access_key = StringField()
+    """
+    Game 用于描述游戏对象
+    """
+    name = StringField()  # Game 名称
+    ios_access_key = StringField()  # iOS 访问服务器时所需要的 key
+    android_access_key = StringField()  # Android 访问服务器所需要的 key
 
     def __repr__(self):
         return 'Game {}>'.format(self.id)
 
     @staticmethod
     def new(name):
+        """
+        创建一个新的游戏
+        :param name:
+        :return:
+        """
         game = Game()
         game.name = name
         game.ios_access_key = random_string_generator(32)

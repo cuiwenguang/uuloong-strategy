@@ -12,3 +12,4 @@ from app.api_v1_0 import strategy
 from app.api_v1_0 import event
 from app.api_v1_0 import game
 from app.api_v1_0 import campaign
+from app.api_v1_0 import series_data

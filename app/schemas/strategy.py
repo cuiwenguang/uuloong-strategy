@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from marshmallow_mongoengine import ModelSchema
 from marshmallow import post_dump, pre_load
 from ..models.strategy import Strategy
@@ -11,6 +13,9 @@ class StrategySchema(ModelSchema):
 
     @pre_load
     def pre_load_process(self, data):
+        """
+        验证传入对象中是的各个广告商是否存在
+        """
         banner_campaigns = data.get("banner_campaign")
         if banner_campaigns is None:
             banner_campaigns = []
@@ -50,6 +55,11 @@ class StrategySchema(ModelSchema):
 
     @post_dump
     def post_dump_process(self, data):
+        """
+        将策略对象中的 campaign_id 提取城 campaign 对象, 同时将 Campaign 的 Enum 赋值给策略对象
+        :param data:
+        :return:
+        """
         banner_campaigns = data.get("banner_campaign")
         if banner_campaigns is None:
             banner_campaigns = []
@@ -62,6 +72,8 @@ class StrategySchema(ModelSchema):
         if video_campaigns is None:
             video_campaigns = []
 
+        # 以下为为了减少查询次数而做的一次性查询操作
+        
         all_campaigns = banner_campaigns + interstitial_campaigns + video_campaigns
 
         campaign_ids = []
