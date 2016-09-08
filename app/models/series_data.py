@@ -41,6 +41,3 @@ class SeriesData(Document):
     def __repr__(self):
         return 'SeriesData {}>'.format(self.id)
 
-    @staticmethod
-    def get_first(time, type):
-        return SeriesData.objects(timestamp=time, type=type).first()
