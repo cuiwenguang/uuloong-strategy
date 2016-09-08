@@ -17,7 +17,7 @@ class Tactics(EmbeddedDocument):
     """
     mins = FloatField()  # 广告每几分钟显示一次
     times = FloatField()  # 广告一共显示几次
-
+    weight = IntField()   # 广告权重 cui 2016.9.8
 
 class Advertise(EmbeddedDocument):
     """
@@ -29,6 +29,7 @@ class Advertise(EmbeddedDocument):
     z_index = IntField()  # 广告优先级,按照 1000 往下,降幂
 
 
+
 class Strategy(Document):
     """
     Strategy 用于描述广告显示策略
@@ -37,6 +38,7 @@ class Strategy(Document):
 
     country = StringField()  # 策略所属国家,需要按照 ISO 3361 标准
     device_model = StringField()  # 策略所属设备, 可选为 iOS 和 Android
+    update_time = DateTimeField() # 更新或者穿件时间 cui 2016.9.8
 
     banner_campaign = ListField(EmbeddedDocumentField(Advertise))  # banner 策略
     interstitial_campaign = ListField(EmbeddedDocumentField(Advertise))  # 插页策略

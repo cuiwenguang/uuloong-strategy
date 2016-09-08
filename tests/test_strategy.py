@@ -1,6 +1,7 @@
 # This file test_strategy is created by lincan for Project uuloong-strategy
 # on a date of 8/17/16 - 3:14 PM
 
+import datetime
 import unittest
 from flask import json
 from mongoengine import connect
@@ -84,17 +85,22 @@ class StrategyTestCase(unittest.TestCase):
             "game_id": self.game_id,
             "country": "CN",
             "device_model": "iOS",
+            "update_time":datetime.datetime.now(),
             "banner_campaign": [{
                 "campaign_id": c1["id"],
                 "tactic": {
-                    "mins": 10
+                    "weight": 10,
+                    "mins": 10,
+                    "times": 20
                 },
                 "z_index": 1000
             }],
             "interstitial_campaign": [{
                 "campaign_id": c2["id"],
                 "tactic": {
-                    "times": 10
+                    "weight": 10,
+                    "mins": 10,
+                    "times": 20
                 },
                 "z_index": 1000
             }],
@@ -116,17 +122,22 @@ class StrategyTestCase(unittest.TestCase):
             "game_id": self.game_id,
             "country": "CN",
             "device_model": "iOS",
+            "update_time": datetime.datetime.now(),
             "banner_campaign": [{
                 "campaign_id": c1["id"],
                 "tactic": {
-                    "mins": 10
+                    "weight": 10,
+                    "mins": 10,
+                    "times": 20
                 },
                 "z_index": 1000
             }],
             "interstitial_campaign": [{
                 "campaign_id": c2["id"],
                 "tactic": {
-                    "times": 10
+                    "weight": 10,
+                    "mins": 10,
+                    "times": 20
                 },
                 "z_index": 1000
             }],
@@ -148,17 +159,22 @@ class StrategyTestCase(unittest.TestCase):
             "game_id": self.game_id,
             "country": "US",
             "device_model": "iOS",
+            "update_time":datetime.datetime.now(),
             "banner_campaign": [{
                 "campaign_id": c1["id"],
                 "tactic": {
-                    "mins": 10
+                    "weight": 10,
+                    "mins": 10,
+                    "times": 20
                 },
                 "z_index": 1000
             }],
             "interstitial_campaign": [{
                 "campaign_id": c2["id"],
                 "tactic": {
-                    "times": 10
+                    "weight": 10,
+                    "mins": 10,
+                    "times": 20
                 },
                 "z_index": 1000
             }],
