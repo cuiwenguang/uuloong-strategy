@@ -56,3 +56,5 @@ target/
 
 # Virtual environment
 venv
+
+.idea/
