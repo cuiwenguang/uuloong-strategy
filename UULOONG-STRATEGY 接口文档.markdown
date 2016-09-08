@@ -479,16 +479,19 @@ X-BYGame-Application-Token: xxxxxxxxxxxx
 返回数据：
 
 修改版 Strategy，结构如下
+说明： tactic 字段会更具国家的不同以及设备不同而有特定的设置。这里需要注意一下
 
 ```json
 {
 	"game_id": "string",
 	"country": "string",
 	"device_model": "string",
+	"update_time":"datetime",			// 更新或者创建时间  新增
 	"banner_campaign": [{
-		"campaign": "string", // 广告商对象的 Enum 字段
+		"campaign": "string", // 广告商对象的 Enum 字段		
 		"z_index": int,
 		"tactic": {
+			"weight":int,		//广告显示权重	(0，100]		新增
 			"mins": float,
 			"times": float
 		}
@@ -497,6 +500,7 @@ X-BYGame-Application-Token: xxxxxxxxxxxx
 		"campaign": "string", // 广告商对象的 Enum 字段
 		"z_index": int,
 		"tactic": {
+			"weight":int,		//广告显示权重	(0，100]		新增
 			"mins": float,
 			"times": float
 		}
@@ -505,6 +509,7 @@ X-BYGame-Application-Token: xxxxxxxxxxxx
 		"campaign": "string", // 广告商对象的 Enum 字段
 		"z_index": int,
 		"tactic": {
+			"weight":int,		//广告显示权重	(0，100]			新增
 			"mins": float,
 			"times": float
 		}
@@ -532,11 +537,12 @@ X-BYGame-Application-Token: xxxxxxxxxxxx
 	"value": {
 		"campaign": "string", // 广告商 enum
 		"campaign_type": "string", // 广告类型
-		
 		"if_displayed": bool, // 广告是否播放成功
 		"if_clicked": bool, // 广告的否被点击
 		"video_duration": float, // 广告播放时长
-		"if_download": bool // 广告内容是否被下载
+		"if_download": bool, // 广告内容是否被下载
+		"if_failed":bool,	// 是否发生了错误								 新增
+		"info":"string"		// 备用字段，如果发生错误这里填写简要信息			新增
 	}
 }]
 ```
@@ -546,5 +552,60 @@ X-BYGame-Application-Token: xxxxxxxxxxxx
 ```json
 {
 	"success": true,
+}
+```
+
+
+获取游戏节点配置数据   - 新增
+说明：阀值节点 、以及 每个游戏节点会更具 国家以及设备类型进行进行变动
+返回数据,结构如下：
+
+```json
+{
+	"game_id":"string",						// 游戏id
+	"country":"string",						// 国家区分
+	"device_model":"string",				// 设备类型
+	"update_time":"datetime",				// 更新或者创建时间
+	"threshold":int,						// 阀值节点
+	"threshold01":int,						// 备用阀值节点
+	"value":[
+		{
+			"node_id":int,
+			"campaign_type":"string",			//广告类型
+			"probability":int,					// 概率
+			"attached":[
+				{
+					"node_id":int,				// 游戏节点id
+					"value":"string"				// 附加信息
+				}
+			]						
+		}
+	]
+}
+
+游戏控制参数获取		- 新增
+说明： 控制参数 会更具设备和国家有所不同
+```json
+{
+  "game_id":"string",			// 游戏id
+  "country":"string",			// 国家
+  "device_model":"string",		// 设备类型
+  "update_time":"datetime",		// 更新或者创建时间
+  "value":[
+    {"name":"string",			// 名称
+      "vaue":"string"			// 值
+    }
+    ]
+}
+```
+
+
+获取配置信息变更时间 （用以激发手机端进行数据更新）
+
+```json
+{
+	"confige":"datetime",		// 配置数据更新时间
+	"game_node":"datetime",		// 游戏节点配置更新时间
+	"strategy":"datetime"		// 广告策略更新时间
 }
 ```
