@@ -521,13 +521,13 @@ X-BYGame-Application-Token: xxxxxxxxxxxx
 #### 创建序列数据
 
 
-#### 手机端获取策略
-`GET /api/v1.0/strategy
+#### 手机端上传统计数据
+`POST /api/v1.0/series_data
 
 手机端需要发送 "X-BYGame-Application-Token" 作为 header， 需要注意的是，"X-BYGame-Application-Token" 的值是由 Game resources 创建时生成的
 
 ```http
-GET /api/v1.0/series_data HTTP/1.1
+POST /api/v1.0/series_data HTTP/1.1
 Content-Type: application/json
 X-BYGame-Application-Token: xxxxxxxxxxxx
 
