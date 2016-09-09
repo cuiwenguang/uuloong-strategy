@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d586b6-ae8c-423c-99e5-27ebdb48961f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/api_v1_0/__init__.py" afterPath="$PROJECT_DIR$/app/api_v1_0/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/campaign.py" afterPath="$PROJECT_DIR$/app/models/campaign.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/event.py" afterPath="$PROJECT_DIR$/app/models/event.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/game.py" afterPath="$PROJECT_DIR$/app/models/game.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/strategy.py" afterPath="$PROJECT_DIR$/app/models/strategy.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/schemas/strategy.py" afterPath="$PROJECT_DIR$/app/schemas/strategy.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UULOONG-STRATEGY 接口文档.markdown" afterPath="$PROJECT_DIR$/UULOONG-STRATEGY 接口文档.markdown" />
     </list>
     <ignored path="uuloong-strategy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +31,21 @@
           <file leaf-file-name="strategy.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/api_v1_0/strategy.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+                <state relative-caret-position="720">
+                  <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#47#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="UULOONG-STRATEGY 接口文档.markdown" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/UULOONG-STRATEGY 接口文档.markdown">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1797">
+                  <caret line="586" column="9" selection-start-line="586" selection-start-column="9" selection-end-line="586" selection-end-column="9" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -76,25 +80,13 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="strategy.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="strategy.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/schemas/strategy.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="393">
-                  <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+                <state relative-caret-position="447">
+                  <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
                   <folding>
                     <element signature="e#25#72#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/__init__.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="162">
-                  <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#23#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -108,6 +100,16 @@
                   <folding>
                     <element signature="e#0#34#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="strategy.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/models/strategy.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="17" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -127,16 +129,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="162">
                   <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="campaign.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/api_v1_0/campaign.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="72">
-                  <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
                   <folding />
                 </state>
               </provider>
@@ -217,8 +209,8 @@
           <file leaf-file-name="series_data.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/series_data.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="342">
-                  <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+                <state relative-caret-position="378">
+                  <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -227,8 +219,8 @@
           <file leaf-file-name="strategy.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/models/strategy.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+                <state relative-caret-position="504">
+                  <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -237,8 +229,8 @@
           <file leaf-file-name="strategy.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/schemas/strategy.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1044">
-                  <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
+                <state relative-caret-position="1224">
+                  <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
                   <folding>
                     <element signature="e#25#72#0" expanded="true" />
                   </folding>
@@ -316,10 +308,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="274" />
-    <option name="y" value="150" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="y" value="23" />
+    <option name="width" value="2560" />
+    <option name="height" value="1413" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -346,6 +337,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -452,8 +445,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -775,16 +766,16 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="274" y="150" width="1920" height="1053" extended-state="6" />
+    <frame x="0" y="23" width="2560" height="1413" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12832801" sideWeight="0.4759036" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12787926" sideWeight="0.4759036" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28407907" sideWeight="0.5042598" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980143" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28407907" sideWeight="0.49574015" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10969116" sideWeight="0.52409637" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -969,8 +960,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/api_v1_0/strategy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        <state relative-caret-position="720">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
@@ -1072,9 +1063,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1097,7 +1085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,8 +1098,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/UULOONG-STRATEGY 接口文档.markdown">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8400">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1797">
+          <caret line="586" column="9" selection-start-line="586" selection-start-column="9" selection-end-line="586" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1144,8 +1132,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/series_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        <state relative-caret-position="378">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1168,16 +1156,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/strategy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="504">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/schemas/strategy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+        <state relative-caret-position="1224">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="e#25#72#0" expanded="true" />
           </folding>
