@@ -20,6 +20,7 @@ def get_strategy():
 
         data = strategy_schema.dump(strategy).data
 
+
     except Exception as e:
         raise ServerException(e.message)
 

@@ -1,0 +1,200 @@
+.header-wrap {
+  height: 80px;
+  background-color: #1d8c59;
+  overflow: hidden;
+}
+.logo {
+  float: left;
+  width: 75px;
+  height: 80px;
+  background: url(../../image/shared/logo.png) no-repeat left;
+  font-size: 0;
+}
+.header-left {
+  position: relative;
+  float: left;
+  width: 60%;
+  height: 80px;
+  margin-top: 23px;
+  padding-left: 30px;
+  font-size: 18px;
+}
+.header-left .nav-item {
+  float: left;
+  padding: 0px 7px;
+  list-style: none;
+}
+.header-left .nav-item a {
+  display: block;
+  height: 30px;
+  padding: 0px 20px 3px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  line-height: 30px;
+  color: #FFF;
+}
+.header-left .nav-item a:hover {
+  background-color: #19734b;
+}
+.header-left .active a {
+  background-color: #19734b;
+}
+.header-right {
+  float: right;
+  width: 300px;
+  height: 80px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  line-height: 25px;
+  text-align: right;
+  font-size: 14px;
+}
+.header-right a,
+.header-right span {
+  color: #FFF;
+}
+.header-right span {
+  padding: 0 5px;
+}
+.header-right .shopping-icon {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  width: 30px;
+  height: 26px;
+  background: url(../../image/shared/shoppingcar.png) no-repeat;
+  vertical-align: middle;
+  font-size: 0;
+}
+.header-right-top {
+  margin-top: 10px;
+}
+.header-right-bottom {
+  margin-top: 10px;
+}
+/*椤佃剼*/
+.footer {
+  margin-top: 20px;
+  border-top: #f0f0f0 solid 1px;
+}
+.footer .com-link {
+  background-color: #545454;
+  overflow: hidden;
+}
+.footer .address {
+  margin-top: 10px;
+  float: right;
+  width: 350px;
+  height: 205px;
+  overflow: hidden;
+}
+.footer .address p {
+  margin-left: 20px;
+  margin-top: 5px;
+  line-height: 40px;
+  color: #F5F5F5;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.footer .address .left-img {
+	float: left;
+	width: 160px;
+	text-align: center
+}
+
+.footer .address .right-img {
+	float: left;
+	width: 160px;
+	text-align: center
+}
+
+.footer .address img {
+	margin-bottom: 5px
+}
+
+.footer .address label {
+	display: block;
+	letter-spacing: 2px
+}
+
+.footer .address dl {
+  float: left;
+  width: 160px;
+  text-align: left;
+  font-size: 16px;
+  margin-left: 20px;
+}
+.footer .address dd {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+.footer .address a {
+  color: #F5F5F5;
+  text-decoration: none;
+}
+
+.footer .address span {
+  float: right;
+  display: block;
+  width: 100%;
+  text-align: right;
+  color: #F5F5F5;
+  font-size: 13px;
+}
+.footer .link-menu {
+  margin-top: 14px;
+  float: left;
+}
+.footer .link-menu dl {
+  float: left;
+  width: 200px;
+  text-align: left;
+  font-size: 17px;
+  margin-right: 10px;
+}
+.footer .link-menu dt {
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  color: #F5F5F5;
+}
+.footer .link-menu dd {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+.footer .link-menu a {
+  color: #F5F5F5;
+}
+.footer .copyright {
+  padding: 10px 0;
+  line-height: 35px;
+  background-color: #3e3e3e;
+  text-align: center;
+  color: #F5F5F5;
+}
+.footer .copyright .cp-list {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin: 0 auto;
+  font-size: 0;
+  vertical-align: top;
+}
+.footer .copyright li {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-size: 12px;
+}
+.footer .copyright a {
+  padding: 0 10px;
+  color: #F5F5F5;
+}
+.footer .copyright p {
+  font-size: 12px;
+}

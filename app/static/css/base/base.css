@@ -1,0 +1,285 @@
+/*系统公共样式配置（不包括颜色配置）*/
+/* 宋体字 */
+/*new前台*/
+/*new中心*/
+/*商家中心主色*/
+/*用户中心主色*/
+/*用户中心主色*/
+/*公用样式方法*/
+/**********/
+/*颜色*/
+/*默认链接色*/
+/*按钮背景色*/
+/*用户中心主色*/
+/*字体颜色*/
+/*边框色*/
+/*其他颜色*/
+/*-----常用------*/
+/*******请使用上面的变量，没有请添加******/
+/*-----系统配色方案-----*/
+/*-----文字配色方案-----*/
+/*-----按钮配色方案-----*/
+/*-----边框配色方案-----*/
+/*文字规格*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: #696969;
+  font-size: 14px;
+  font-family: "Microsoft Yahei", "WenQuanYi Micro Hei", Arial, "Hiragino Sans GB", tahoma, sans-serif;
+  min-width: 1200px;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  outline: none;
+  resize: none;
+}
+input[type=button],
+textarea {
+  border: none;
+  cursor: pointer;
+}
+input[type=text] {
+  height: 16px;
+  padding: 4px 2px;
+  font-size: 12px;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+cite,
+code,
+em,
+strong,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+fieldset,
+img {
+  border: 0;
+  max-width: 840px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  text-align: left;
+}
+a {
+  color: #1c64b6;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+em {
+  color: #ec6f1d;
+}
+/* clear float */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+/* tool */
+.con-width {
+  width: 1200px;
+  margin: 0 auto;
+}
+.content {
+  min-height: 620px;
+  padding-top: 20px;
+}
+.transit:hover {
+  -moz-transition: all 350ms;
+  -o-transition: all 350ms;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+}
+.clear {
+  clear: both;
+}
+.bold {
+  font-weight: bold;
+}
+.left {
+  text-align: left;
+}
+.error {
+  color: Red;
+}
+.succeed {
+  color: Green;
+}
+.center {
+  text-align: center;
+}
+.fleft {
+  float: left;
+}
+.fright {
+  float: right;
+}
+.zoom {
+  zoom: 1;
+}
+.hide {
+  display: none;
+}
+.hidden {
+  visibility: hidden;
+}
+.none {
+  display: none !important;
+}
+.block {
+  display: block !important;
+}
+.f12 {
+  font-size: 12px;
+}
+.f13 {
+  font-size: 13px;
+}
+.f14 {
+  font-size: 14px;
+}
+.f16 {
+  font-size: 16px;
+}
+.f20 {
+  font-size: 20px;
+}
+.fb {
+  font-weight: bold;
+}
+.fn {
+  font-weight: normal;
+}
+.t2 {
+  text-indent: 2em;
+}
+.mar20 {
+  margin-top: 20px;
+}
+.nonelist {
+  text-align: center;
+  padding-top: 30px;
+  width: 100%;
+  float: left;
+}
+.sp-error-msg {
+  color: red;
+  margin-left: 20px;
+}
+input,
+textarea,
+select {
+  border: 1px solid #f0f0f0;
+}
+.input-error-msg {
+  border: 1px solid red;
+}
+.detail-btn {
+  margin: 20px;
+  float: right;
+}
+.detail-btn a {
+  display: inline-block;
+  width: 118px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  font-size: 16px;
+  float: right;
+}
+.detail-btn .btn-block {
+  border: 1px solid #ccc;
+  color: #ccc;
+  margin-left: 30px;
+}
+.detail-btn .btn-green {
+  border: 1px solid #1d8c59;
+  color: #fff;
+  background: #1d8c59;
+  margin-left: 30px;
+}
+.detail-btn .btn-orage {
+  border: 1px solid #ec6f1d;
+  color: #ec6f1d;
+  margin-left: 30px;
+}
+.detail-btn .btn-orage:hover {
+  border: 1px solid #ec6f1d;
+  color: #fff;
+  background: #ec6f1d;
+}
+.detail-link {
+  margin-left: 40px;
+  margin-top: 10px;
+}
+.detail-link p {
+  line-height: 50px;
+}
+.detail-link a {
+  display: inline-block;
+  width: 98px;
+  height: 28px;
+  line-height: 28px;
+  margin-right: 20px;
+  border: #1d8c59 solid 1px;
+  color: #1d8c59;
+  text-align: center;
+  font-weight: bold;
+}

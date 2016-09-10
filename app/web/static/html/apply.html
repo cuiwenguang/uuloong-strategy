@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>应用设置</title>
+    <style>
+
+    </style>
+    <link type="text/css" rel="stylesheet" href="../css/base/layout.css" />
+    <link type="text/css" rel="stylesheet" href="../css/base/base.css" />
+    <link type="text/css" rel="stylesheet" href="../css/base/common.css" />
+    <link type="text/css" rel="stylesheet" href="../css/lib/alertBox.css" />
+    <link type="text/css" rel="stylesheet" href="../css/lib/pager.css" />
+    <script src="../js/base/require.js"></script>
+    <script src="../js/start.js"></script>
+    <script src="../js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+<div class="header">
+    <h1 class="logo"><strong>麒麟游戏广告管理中心</strong></h1>
+</div>
+<div class="left">
+    <ul class="menu">
+        <li><a class="list-title active"  href="apply.html"><span>应用设置</span></a></li>
+        <li><a class="list-title" href="advertise.html"><span>广告商配置</span></a></li>
+        <li><a class="list-title" href="setadvertise.html"><span>应用广告商设置</span></a></li>
+    </ul>
+</div>
+<div class="right" X-ng-controller="listCtrl">
+    <a class="btn" id="addapply" ng-click="addapply()">添加应用</a>
+    <table class="table-simple table-header-bg">
+        <thead>
+            <tr>
+                <th>应用名</th>
+                <th >设备类型</th>
+                <th>访问钥匙</th>
+            </tr>
+        </thead>
+        <tbody  ng-repeat="item in list track by $index">
+            <tr>
+                <td ng-bind="item.name" rowspan="2"></td>
+                <td>android</td>
+                <td ng-bind="item.android_access_key">android</td>
+            </tr>
+            <tr>
+                <td>ios</td>
+                <td ng-bind="item.ios_access_key">ios</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="js_hide_temp" class="hide">
+        <input type="text" name="apply" class="apply" placeholder="请输入应用名称"/>
+    </div>
+    <div class="pager" X-ng-controller="pageCtrl">
+        <div ng-if="page.total>0" class="page-right">
+            <label>共<span ng-bind="page.count">1</span>页</label>
+            <label>显示</label>
+            <select class="select-num" ng-model="page.size" ng-options="item for item in page.sizeList" ng-change="page.changSize()"></select>
+            <label>条/页</label>
+        </div>
+        <div ng-if="page.total>0" class="page-left">
+            <a ng-click="page.uppage()" ng-show="page.index>1">上一页</a>
+            <a ng-repeat="a in page.list.list" ng-bind="a" ng-click="page.pageclick(a)" ng-class="{'active':a==page.list.select}"></a>
+            <a ng-if="page.count-page.index>0" ng-click="page.downpage()">下一页</a>
+            <!-- 		        <a href="javascript:void(0)" ng-click="page.downpage()"  ng-show="page.index<page.count">下一页</a> -->
+        </div>
+        <div ng-if="page.total<1" class="pager-centent">
+            暂无信息!
+        </div>
+    </div>
+</div>
+
+<script>
+
+    require(["angular","alertBox","ngPager","route"],function(angular,alertBox,ngPager,route){
+        var app = ngMoudle("AdvertList");
+        var pdata={advert:{},total:0};
+        function jsoncallback(){
+
+        }
+        app.service("pageConfig", function(){
+            return {list:pdata.advert,count:pdata.total,sizeList:[10,20],size:10};
+        });
+        app.service("getData",function($http){
+            return function(pageIndex,pageSize,reset){
+                $http.get(route.url+"/api/v1.0/games?pi="+pageIndex+"&ps="+pageSize
+                ).success(function(data, status) {
+                            reset(data,data.length);
+                        }).error(function(data, status, headers, config) {
+                            console.log("error");
+                        });
+            }
+        });
+        ngPager.init(app,"pageConfig","getData");
+        app.controller("listCtrl",["$scope","pageConfig","pager","$http",function(scope,pageModel,pager,$http){
+            scope.list = pageModel.list;
+            scope.addapply=function(){
+                var html = $("#js_hide_temp").html();
+                $.alertBox.custom({content:html,title:"添加应用",height:150,width:410,init:function(id){
+
+                },submit:function(){
+                    var data={
+                        "name": $(".alert-main .apply").val(),
+                        "ios_access_key": null,
+                        "android_access_key": null
+                    };
+                    $http.post(route.url+"/api/v1.0/games",data
+                    ).success(function(data, status) {
+                        pager.pageclick(1);
+                        $.alertBox.hide();
+                    }).error(function(data, status, headers, config) {
+                        console.log("error");
+                    });
+                }
+                });}
+            pager.pageclick(1);
+
+        }]);
+
+        angular.bootstrap(document, ["AdvertList"]);
+
+    });
+</script>
+</body>
+</html>

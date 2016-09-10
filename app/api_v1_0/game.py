@@ -6,6 +6,8 @@ from ..models.game import Game
 from ..schemas.game import game_schema, games_schema
 
 
+
+
 @api.route('/games', methods=['GET'])
 def get_games():
     try:

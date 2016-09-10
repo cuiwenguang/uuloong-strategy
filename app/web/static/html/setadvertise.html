@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>应用广告商设置</title>
+    <style>
+        .right>select{margin-left:70px;padding:5px;}
+    </style>
+    <link type="text/css" rel="stylesheet" href="/static/css/base/layout.css" />
+    <link type="text/css" rel="stylesheet" href="/static/css/base/base.css" />
+    <link type="text/css" rel="stylesheet" href="/static/css/base/common.css" />
+    <link type="text/css" rel="stylesheet" href="/static/css/lib/pager.css" />
+    <script src="/static/js/base/require.js"></script>
+    <script src="/static/js/start.js"></script>
+    <script src="/static/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+<div class="header">
+    <h1 class="logo"><strong>麒麟游戏广告管理中心</strong></h1>
+</div>
+<div class="left">
+    <ul class="menu">
+        <li><a class="list-title"  href="apply.html"><span>应用设置</span></a></li>
+        <li><a class="list-title" href="advertise.html"><span>广告商配置</span></a></li>
+        <li><a class="list-title active" href="setadvertise.html"><span>应用广告商设置</span></a></li>
+    </ul>
+</div>
+<div class="right"  X-ng-controller="listCtrl">
+    <a class="btn" ng-show="appId!=''" ng-href="setrate.html">查看率点设置</a>
+    <!--<a class="btn" ng-show="appId!=null&&appId!=''" ng-href="applydetails.html?id={{appId.id}}">查看详情</a>-->
+    <select ng-model="appId" X-ng-options="item.name for item in appList" ng-change="stateChange(appId)">
+       <option value="">--请选择应用--</option>
+    </select>
+    <table class="table-simple table-header-bg"  ng-show="list.length>0">
+        <thead>
+        </thead>
+        <tbody  ng-repeat="item in list track by $index">
+            <tr>
+                <td ng-bind="item.country" rowspan="3" style="width:20%;"></td>
+                <td ng-bind="item.device_model" rowspan="3" style="width:20%;"></td>
+                <td>音频</td>
+                <td>
+                    <p ng-repeat="items in item.video_campaign"><span ng-bind="items.campaign"></span></p>
+                </td>
+             </tr>
+            <tr>
+                <td>插页</td>
+                <td>
+                    <p ng-repeat="items in item.interstitial_campaign"><span ng-bind="items.campaign"></span></p>
+                </td>
+            </tr>
+            <tr>
+                <td>广告</td>
+                <td><p ng-repeat="items in item.banner_campaign"><span ng-bind="items.campaign"></span></p></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="pager" X-ng-controller="pageCtrl">
+        <div ng-if="page.total>0" class="page-right">
+            <label>共<span ng-bind="page.count">1</span>页</label>
+            <label>显示</label>
+            <select class="select-num" ng-model="page.size" ng-options="item for item in page.sizeList" ng-change="page.changSize()"></select>
+            <label>条/页</label>
+        </div>
+        <div ng-if="page.total>0" class="page-left">
+            <a ng-click="page.uppage()" ng-show="page.index>1">上一页</a>
+            <a ng-repeat="a in page.list.list" ng-bind="a" ng-click="page.pageclick(a)" ng-class="{'active':a==page.list.select}"></a>
+            <a ng-if="page.count-page.index>0" ng-click="page.downpage()">下一页</a>
+            <!-- 		        <a href="javascript:void(0)" ng-click="page.downpage()"  ng-show="page.index<page.count">下一页</a> -->
+        </div>
+        <div ng-if="page.total<1" class="pager-centent">
+            暂无信息!
+        </div>
+    </div>
+</div>
+<script>
+
+    require(["angular","alertBox","ngPager","route"],function(angular,alertBox,ngPager,route){
+        var app = ngMoudle("AdvertList");
+        var pdata={advert:{},total:0,appId:'',appList:[]};
+        app.constant("pdata",pdata);
+        app.service("pageConfig",function(){
+            return {list:pdata.advert,count:pdata.total,sizeList:[10,20],size:10};
+        });
+        app.service("getData",["$http","pdata", function($http,pdata){
+            return function(pageIndex,pageSize,reset){
+                $http.get(route.url+"/api/v1.0/strategies?game_id="+pdata.appId.id+"&pi="+pageIndex+"&ps="+pageSize
+                ).success(function(data, status) {
+                            reset(data,data.length);
+                        }).error(function(data, status, headers, config) {
+                            console.log("error");
+                        });
+            }
+        }]);
+        ngPager.init(app,"pageConfig","getData");
+        app.controller("listCtrl",["$scope","pageConfig","pager","$http","pdata",function(scope,pageModel,pager,$http,pdata){
+            scope.list = pageModel.list;
+            //pager.pageclick(1);
+            scope.appId=pdata.appId;
+            scope.appList=pdata.appList;
+            $http.get(route.url+"/api/v1.0/games").success(function(data) {
+                scope.appList=data;
+            }).error(function(data, status, headers, config) {
+                console.log("error");
+            });
+            scope.stateChange=function(appId){
+                pdata.appId=appId;
+                if(scope.appId==''||scope.appId==null){
+
+                }else{
+                    pager.pageclick(1);
+                }
+            }
+
+         }]);
+        angular.bootstrap(document, ["AdvertList"]);
+
+    });
+</script>
+
+</body>
+
+
+</html>
