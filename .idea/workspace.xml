@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e7d586b6-ae8c-423c-99e5-27ebdb48961f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/__init__.py" afterPath="$PROJECT_DIR$/app/models/__init__.py" />
     </list>
     <ignored path="uuloong-strategy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -518,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1473531375881</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="集成前台页面">
+      <created>1473531552963</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1473531552963</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
