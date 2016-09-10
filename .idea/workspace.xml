@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d586b6-ae8c-423c-99e5-27ebdb48961f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/image/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/css/base/account.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/css/base/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/css/base/common.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/css/base/company-master.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/css/base/layout.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/css/base/master.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/css/base/user-master.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/js/base/accountBase.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/js/base/domReady.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/js/base/require.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/js/jquery-1.7.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/static/js/start.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/web/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/web/dashboard.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/web/static/html/advertise.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/web/static/html/apply.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/web/static/html/applydetails.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/web/static/html/setadvertise.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/web/static/html/setrate.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/__init__.py" afterPath="$PROJECT_DIR$/app/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/api_v1_0/__init__.py" afterPath="$PROJECT_DIR$/app/api_v1_0/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/api_v1_0/game.py" afterPath="$PROJECT_DIR$/app/api_v1_0/game.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/api_v1_0/strategy.py" afterPath="$PROJECT_DIR$/app/api_v1_0/strategy.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/__init__.py" afterPath="$PROJECT_DIR$/app/models/__init__.py" />
     </list>
     <ignored path="uuloong-strategy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +28,28 @@
     <favorites_list name="uuloong-strategy" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/game.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,7 +71,6 @@
         <option value="$PROJECT_DIR$/app/api_v1_0/rest_strategy.py" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/app/models/__init__.py" />
         <option value="$PROJECT_DIR$/app/controllers/geo_location.go" />
         <option value="$PROJECT_DIR$/app/controllers/geo_locatin.py" />
         <option value="$PROJECT_DIR$/app/controllers/device_model.py" />
@@ -110,6 +107,7 @@
         <option value="$PROJECT_DIR$/app/schemas/series_data.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/models/series_data.py" />
+        <option value="$PROJECT_DIR$/app/models/__init__.py" />
       </list>
     </option>
   </component>
@@ -120,8 +118,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="368" />
-    <option name="y" value="86" />
+    <option name="x" value="320" />
+    <option name="y" value="90" />
     <option name="width" value="1351" />
     <option name="height" value="819" />
   </component>
@@ -180,6 +178,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uuloong-strategy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uuloong-strategy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -495,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1473367131740</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="集成前台页面">
+      <created>1473531375881</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1473531375881</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -540,15 +563,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="368" y="86" width="1351" height="819" extended-state="0" />
-    <editor active="false" />
+    <frame x="320" y="90" width="1351" height="819" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22905457" sideWeight="0.4759036" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22905457" sideWeight="0.4759036" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28407907" sideWeight="0.5042598" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2925072" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32761088" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27403155" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28386167" sideWeight="0.49574015" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10969116" sideWeight="0.52409637" order="2" side_tool="true" content_ui="tabs" />
@@ -576,7 +599,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="统计数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="统计数据" />
+    <MESSAGE value="集成前台页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="集成前台页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -634,13 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -791,13 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/game.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_campigns.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -896,24 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UULOONG-STRATEGY 接口文档.markdown">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="21">
-            <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-8400">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -934,6 +926,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UULOONG-STRATEGY 接口文档.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-6567">
+            <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-8400">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
